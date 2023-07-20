@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "RestaurantRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Restaurant Registration</h2>
+@Html.ValidationSummary()
+
+<form method="post">
+    Restaurant Name:<input type="text" name="name" value="@(ViewBag.Model !=null ? ViewBag.Model.name : "")" placeholder="Enter Yout Restaurant Name" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("name")</span>
+    <br />
+    Address: <input type="text" name="Address" value="@(ViewBag.Model != null ? ViewBag.Model.address : "")" placeholder="Enter Your Address" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("address")</span>
+    <br />
+    Contact Number: <input type="text" name="Contact" value="@(ViewBag.Model != null ? ViewBag.Model.contact : "")" placeholder="Start with +880" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("contact")</span>
+    <br />
+    Email: <input type="email" name="Email" value="@(ViewBag.Model != null ? ViewBag.Model.email : "")" placeholder="Enter valid Email" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("email")</span>
+    <br />
+    Type:
+    <select class="form-control" name="Type">
+        <option selected disabled>--Select--</option>
+        <option>Fast Food</option>
+        <option>Buffet</option>
+        <option>Bangla Hotel</option>
+        <option>Cafe</option>
+        <option>Dining</option>
+        <option>Others</option>
+    </select>
+
+    <span class="text-danger">@Html.ValidationMessage("Type")</span>
+    <br />
+    Password: <input type="password" name="Password" value="@(ViewBag.Model != null ? ViewBag.Model.password : "")" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("password")</span>
+    <br />
+    <input type="submit" class="btn btn-danger" />
+</form>

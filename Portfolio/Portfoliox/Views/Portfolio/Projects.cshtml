@@ -1,0 +1,26 @@
+﻿﻿
+@{
+    ViewBag.Title = "Projects";
+}
+
+<h2>Projects</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Serial</th>
+            <th scope="col">Course Name</th>
+            <th scope="col">Project Name</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tbody class="table-group-divider">
+            <tr>
+                <th scope="row">@item.Serial</th>
+                <td>@item.Course</td>
+                <td>@item.Description</td>
+            </tr>
+        </tbody>
+    }
+</table>

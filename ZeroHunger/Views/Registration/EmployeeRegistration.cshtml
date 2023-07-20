@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{
+    bool CheckGender(string gn)
+    {
+        if (Model != null && Model.Gender != null
+            && Model.Gender.Equals(gn))
+        {
+            return true;
+        }
+        return false;
+    }
+}
+<h2>E/V Registration</h2>
+@Html.ValidationSummary()
+
+<form method="post">
+    First Name:<input type="text" name="firstname" value="@(ViewBag.Model !=null ? ViewBag.Model.firstname : "")" placeholder="Enter Yout First Name" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("firstname")</span>
+    <br/>
+    Last Name:<input type="text" name="lastname" value="@(ViewBag.Model != null ? ViewBag.Model.lastname : "")" placeholder="Enter Your Last Name" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("lastname")</span>
+    <br />
+    Email: <input type="email" name="Email" value="@(ViewBag.Model != null ? ViewBag.Model.email : "")" placeholder="Enter valid Email" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("email")</span>
+    <br />
+    Gender: <input type="radio" checked="@CheckGender("Male")" name="Gender" value="Male" />Male
+    <input type="radio" checked="@CheckGender("Female")" name="Gender" value="Female" />Female
+    <br />
+    <span class="text-danger">@Html.ValidationMessage("Gender")</span>
+    <br />
+    Phone: <input type="text" name="Phone" value="@(ViewBag.Model != null ? ViewBag.Model.phone : "")" placeholder="Start with +880" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("phone")</span>
+    <br />
+    Position:
+    <select class="form-control" name="Position">
+        <option selected disabled>--Select--</option>
+        <option>Volunteer</option>
+        <option>Employee</option>
+        <option>Admin</option>
+    </select>
+
+    <span class="text-danger">@Html.ValidationMessage("Position")</span>
+    <br />
+    Address: <input type="text" name="Address" value="@(ViewBag.Model != null ? ViewBag.Model.address : "")" placeholder="Enter Your Address" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("address")</span>
+
+    Age: <input type="text" name="Age" value="@(ViewBag.Model != null ? ViewBag.Model.age : "")" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("age")</span>
+    <br />
+    Password: <input type="password" name="Password" value="@(ViewBag.Model != null ? ViewBag.Model.password : "")" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("password")</span>
+    <br />
+    <input type="submit" class="btn btn-danger" />
+</form>

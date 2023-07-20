@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "Volunteer";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Volunteer</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Home Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            background-image: url('volunteer-hero.jpg');
+            background-size: cover;
+            height: 400px;
+        }
+
+        .hero-text {
+            text-align: center;
+            padding-top: 150px;
+            color: #fff;
+        }
+
+            .hero-text h1 {
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .hero-text p {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+            .btn-primary:hover {
+                background-color: #0069d9;
+                border-color: #0062cc;
+            }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+            .section-heading h2 {
+                font-size: 36px;
+                font-weight: bold;
+            }
+
+        .card {
+            border: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            .card img {
+                height: 200px;
+            }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 16px;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+            .footer p {
+                margin-bottom: 0;
+            }
+    </style>
+</head>
+<body>
+   
+
+    <!-- Hero Section -->
+    <div class="d-flex justify-content-around">
+        <div>
+            <img width="400" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgJR4G0k7POP-7p-VTbZE446wLPcCORmbWgw&usqp=CAU" />
+        </div>
+        </div>
+
+            <!-- Volunteer Opportunities Section -->
+            <section class="volunteer-section">
+                <div class="container">
+                    <div class="section-heading">
+                        <h2>Volunteer Opportunities</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="volunteer-opportunity-1.jpg" class="card-img-top" alt="Volunteer Opportunity 1">
+                                <div class="card-body">
+                                    <h5 class="card-title">Opportunity 1</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus neque sed neque posuere, sit amet faucibus urna pellentesque.</p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="volunteer-opportunity-2.jpg" class="card-img-top" alt="Volunteer Opportunity 2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Opportunity 2</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus neque sed neque posuere, sit amet faucibus urna pellentesque.</p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img src="volunteer-opportunity-3.jpg" class="card-img-top" alt="Volunteer Opportunity 3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Opportunity 3</h5>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam faucibus neque sed neque posuere, sit amet faucibus urna pellentesque.</p>
+                                    <a href="#" class="btn btn-primary">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+</body>
+</html>
+

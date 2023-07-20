@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeLogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EMPLOYEE/VOLUNTEER</h2>
+
+<form method="post">
+    Email: <input type="email" name="Email" value="@(ViewBag.Model != null ? ViewBag.Model.email : "")" placeholder="Enter valid Email" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("email")</span>
+    <br />
+    Password: <input type="password" name="Password" value="@(ViewBag.Model != null ? ViewBag.Model.password : "")" class="form-control" />
+    <span class="text-danger">@Html.ValidationMessage("password")</span>
+    <br />
+    <input type="submit" class="btn btn-danger" value="Submit" />
+</form>

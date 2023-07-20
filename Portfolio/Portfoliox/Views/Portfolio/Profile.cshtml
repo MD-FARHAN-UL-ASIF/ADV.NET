@@ -1,0 +1,46 @@
+﻿﻿
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Profile</h2>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th scope="col">Name</th>
+            <td>@Model.Name</td>
+        </tr>
+        <tr>
+            <th scope="col">DOB</th>
+            <td>@Model.DOB</td>
+        </tr>
+        <tr>
+            <th scope="col">Nation</th>
+            <td>@Model.Nation</td>
+        </tr>
+        <tr>
+            <th scope="col">Blood Group</th>
+            <td>@Model.BloodGroup</td>
+        </tr>
+        <tr>
+            <th scope="col">Address</th>
+            <td>@Model.Address</td>
+        </tr>
+        <tr>
+            <th scope="col">Contact No</th>
+            <td>@Model.ContactNo</td>
+        </tr>
+        <tr>
+            <th scope="col">Hobbies</th>
+            <td>
+                @{
+                    foreach (var item in Model.Hobbies)
+                    {
+                        <ul>@item</ul>
+                    }
+                }
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,37 @@
+﻿@model ZeroHunger.Models.RequestDTO
+
+@using (Html.BeginForm("Index", "Request", FormMethod.Post, new { @class = "pe-lg-5 pt-5" }))
+{
+    <div class="d-flex justify-content-center">
+        <div class="form-group">
+            <h2 class="text-center">Make a Pickup Request</h2>
+            <div class="mb-3">
+                <label for="restaurant_name" class="form-label">Restaurant Name</label>
+                <input type="text" class="form-control" id="restaurant_name" name="restaurant_name" placeholder="Enter Restaurant Name">
+            </div>
+            <div class="mb-3">
+                <label for="request_time" class="form-label">Request Time</label>
+                <input type="datetime-local" class="form-control" id="request_time" name="request_time" placeholder="Select Request Date & Time">
+            </div>
+            <div class="mb-3">
+                <label for="maxPreservation_time" class="form-label">Max Preservation Time</label>
+                <input type="date" class="form-control" id="maxPreservation_time" name="maxPreservation_time" placeholder="Select Maximum Preservation time">
+            </div>
+            <div class="mb-3">
+                <label for="food_item" class="form-label">Food Item</label>
+                <input type="text" class="form-control" id="food_item" name="food_item" placeholder="Enter Food Item">
+            </div>
+            <div class="mb-3">
+                <label for="Quantity" class="form-label">Quantity</label>
+                <input type="text" class="form-control" id="Quantity" name="Quantity" placeholder="Enter Quantity">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address">
+            </div>
+        </div>
+    </div>
+    <div class="form-group text-center">
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </div>
+}
