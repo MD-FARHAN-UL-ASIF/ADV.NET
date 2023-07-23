@@ -1,0 +1,33 @@
+api/category/create
+****************************************************        CATEGORY>>>CREATE
+{
+        "name": "Education"
+}
+****************************************************
+api/news/create
+***************************************************          NEWS>>CREATE
+{
+    "tittle": "Sports News 4",
+    "date": "2023-07-21",
+    "cid": 3,
+    "description": "forth sports article"   
+}
+****************************
+api/news/update
+************************
+{
+    "id": 8, 
+    "tittle": "Updated  News",
+    "date": "2023-07-23T00:00:00", 
+    "cid": 10, 
+    "description": "Updated description"
+}
+***********************************
+api/category/update
+**********************************
+{
+        "id":14,
+        "name": "Educations"
+}
+*************
+
